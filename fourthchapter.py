@@ -98,7 +98,7 @@ def check_diag(square,n,d,x):
             s+= square [i][n-i-1]
         return s == x
     
-def magique(square):
+def magic(square):
     n = len(square)
     square = n ** 2
     for i in range(1,square):
@@ -106,7 +106,7 @@ def magique(square):
             return False
     return True
 
-def magiqueNormal(square):
+def magic_normal(square):
     n = len(square)
     total = sum_total(square,n)
     print(f'La somme total est de {total}')
@@ -121,8 +121,8 @@ def magiqueNormal(square):
         return False
     if not check_diag(square, n, 2, somme):
         return False
-    if not magique(square):
+    if not magic(square):
         return False
     return True
     
-print(f'La réponse est {magiqueNormal(square)}')
+print(f'La réponse est {magic_normal(square)}')
